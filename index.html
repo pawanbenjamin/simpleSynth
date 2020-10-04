@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="keyboard">
+    <ul class="set">
+      <br/>
+      <br/>
+      <br/>
+      <div class="controls">
+        <span>Waveform: </span>
+        <select id="waveform">
+          <option value="sine">Sine</option>
+          <option value="square">Square</option>
+          <option value="sawtooth" selected="selected">Sawtooth</option>
+          <option value="triangle">Triangle</option>
+        </select>
+        <br />
+
+        <span>Gain: </span>
+        <input
+          id="gain"
+          type="range"
+          min="0.0"
+          max="1.0"
+          step="0.01"
+          value="1.0"
+        />
+        <br />
+
+        <span>Filter Type: </span>
+        <select id="filterType">
+          <option value="lowpass" selected="selected">Lowpass</option>
+          <option value="highpass">Highpass</option>
+          <option value="bandpass">Bandpass</option>
+        </select>
+        <br />
+
+        <span>Filter Frequency: </span>
+        <input
+          id="filterFrequency"
+          type="range"
+          min="20.0"
+          max="10000.0"
+          step="0.01"
+          value="1000.0"
+        />
+        <div class="oct">
+          <span>Octave: </span>
+          <select id="octave">
+            <option value="0.125">-3</option>
+            <option value="0.25">-2</option>
+            <option value="0.5">-1</option>
+            <option value="1">0</option>
+            <option value="2">1</option>
+          </select>
+        </div>
+        <br />
+        <br />
+      </div>
+      <div class="notes">
+      <li id="z" class="white c"></li>
+      <li id="s" class="black cs"></li>
+      <li id="x" class="white d"></li>
+      <li id="d" class="black ds"></li>
+      <li id="c" class="white e"></li>
+      <li id="v" class="white f"></li>
+      <li id="g" class="black fs"></li>
+      <li id="b" class="white g"></li>
+      <li id="h" class="black gs"></li>
+      <li id="n" class="white a"></li>
+      <li id="j" class="black as"></li>
+      <li id="m" class="white b"></li>
+      <li id="q" class="white c2"></li>
+      <li id="2" class="black c2s"></li>
+      <li id="w" class="white d2"></li>
+      <li id="3" class="black d2s"></li>
+      <li id="e" class="white e2"></li>
+      <li id="r" class="white f2"></li>
+      <li id="5" class="black f2s"></li>
+      <li id="t" class="white g2"></li>
+      <li id="6" class="black g2s"></li>
+      <li id="y" class="white a2"></li>
+      <li id="7" class="black a2s"></li>
+      <li id="u" class="white b2"></li>
+      <li id="i" class="white c3"></li>
+      <div class='drumspads'>
+        <li data-key="80" id='p' class='drums'></li>
+        <li data-key="221" id='.' class='drums'></li>
+        <li data-key="219" id='[' class='drums'></li>
+        <li data-key="190" id=']' class='drums'></li>
+      </div>
+      </div>
+    </div>
+  </div>
+  <audio data-key="80" src="drums/hat.wav"></audio>
+  <audio data-key="221" src="drums/Cymbal.wav"></audio>
+  <audio data-key="219" src="drums/Snare.wav"></audio>
+  <audio data-key="190" src="drums/Kick.wav"></audio>
+</body>
+</div>
+</body>
+</html>
